@@ -1,0 +1,310 @@
+//@import '../styles/core.scss';
+
+.albi-button {
+    display: block;
+
+    button {
+        border-radius: 40px;
+        border: none;
+        color: white;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        position: relative;
+        gap: 0.5rem;
+
+
+        mat-icon {
+            font-size: 20px;
+            height: fit-content;
+            font-weight: inherit;
+        }
+    }
+}
+
+.small-button {
+
+    &--large-x-pad {
+        button {
+            min-height: 36px;
+            margin: 0 calc(0.5 * var(--typography-size-base));
+            padding: 0 calc(1.5 * var(--typography-size-base));
+        }
+    }
+
+    &--regular-x-pad {
+        button {
+            min-height: 36px;
+            margin: 0 calc(0.5 * var(--typography-size-base));
+            padding: 0 calc(0.625 * var(--typography-size-base));
+        }
+    }
+}
+
+.medium-button {
+
+    &--large-x-pad {
+        button {
+            min-height: 48px;
+            margin: 0 calc(0.5 * var(--typography-size-base));
+            padding: 0 calc(1.5 * var(--typography-size-base));
+        }
+    }
+
+    &--regular-x-pad {
+        button {
+            min-height: 48px;
+            margin: 0 calc(0.5 * var(--typography-size-base));
+            padding: 0 calc(1 * var(--typography-size-base));
+        }
+    }
+}
+
+.fluid-button {
+
+    button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: calc(1 * var(--typography-size-base));
+    }
+}
+
+
+/* style with colors and variants */
+
+/* ruby-button */
+.ruby-button-filled {
+    &--active {
+        button {
+            background-color: var(--primary-button);
+            fill: white;
+            color: white;
+        }
+
+        button:hover {
+            background-color: var(--primary-button-hover);
+            cursor: pointer;
+        }
+    }
+
+    &--disabled {
+        button {
+            background-color: var(--primary-button-disabled);
+            fill: white;
+        }
+
+    }
+}
+
+.ruby-button-outlined {
+    &--active {
+        button {
+            background-color: transparent;
+            box-shadow: inset 0px 0px 0px 2px var(--primary-button);
+            color: var(--primary-button);
+            fill: var(--primary-button);
+        }
+
+        button:hover {
+            box-shadow: inset 0px 0px 0px 2px var(--primary-button-hover);
+            color: var(--primary-button-hover);
+            fill: var(--primary-button-hover);
+            cursor: pointer;
+        }
+
+    }
+
+    &--disabled {
+        button {
+            background-color: transparent;
+            box-shadow: inset 0px 0px 0px 2px var(--primary-button-disabled);
+            color: var(--primary-button-disabled);
+            fill: var(--primary-button-disabled);
+        }
+    }
+}
+
+.ruby-button-text-only {
+    &--active {
+        button {
+            background-color: transparent;
+            color: var(--primary-button);
+            fill: var(--primary-button);
+        }
+
+        button:hover {
+            color: var(--primary-button-hover);
+            fill: var(--primary-button-hover);
+            cursor: pointer;
+        }
+    }
+
+    &--disabled {
+        button {
+            background-color: transparent;
+            color: var(--primary-button-disabled);
+            fill: var(--primary-button-disabled);
+        }
+
+    }
+
+}
+
+/* eco-button (green) */
+.eco-button-filled {
+    &--active {
+        button {
+            background-color: var(--color-eco);
+            fill: white;
+        }
+
+        button:hover {
+            background-color: var(--color-eco-dark);
+            cursor: pointer;
+        }
+    }
+
+    &--disabled {
+        button {
+            background-color: var(--color-eco-light);
+            fill: white;
+        }
+
+    }
+}
+
+.eco-button-outlined {
+    &--active {
+        button {
+            background-color: transparent;
+            box-shadow: inset 0px 0px 0px 2px var(--color-eco);
+            color: var(--color-eco);
+            fill: var(--color-eco);
+        }
+
+        button:hover {
+            box-shadow: inset 0px 0px 0px 2px var(--color-eco-dark);
+            color: var(--color-eco-dark);
+            fill: var(--color-eco-dark);
+            cursor: pointer;
+        }
+
+    }
+
+    &--disabled {
+        button {
+            background-color: transparent;
+            box-shadow: inset 0px 0px 0px 2px var(--color-eco-light);
+            color: var(--color-eco-light);
+            fill: var(--color-eco-light);
+        }
+    }
+}
+
+.eco-button-text-only {
+    &--active {
+        button {
+            background-color: transparent;
+            color: var(--color-eco);
+            fill: var(--color-eco);
+        }
+
+        button:hover {
+            color: var(--color-eco-dark);
+            fill: var(--color-eco-dark);
+            cursor: pointer;
+        }
+    }
+
+    &--disabled {
+        button {
+            background-color: transparent;
+            color: var(--color-eco-light);
+            fill: var(--color-eco-light);
+        }
+
+    }
+
+}
+
+/* black-button */
+.black-button-filled {
+    &--active {
+        button {
+            background-color: var(--color-black);
+            fill: white;
+        }
+
+        button:hover {
+            background-color: var(--color-black-hover);
+            cursor: pointer;
+        }
+    }
+
+    &--disabled {
+        button {
+            background-color: var(--color-black-light);
+            fill: white;
+        }
+
+    }
+}
+
+.black-button-outlined {
+    &--active {
+        button {
+            background-color: transparent;
+            box-shadow: inset 0px 0px 0px 2px var(--color-black);
+            color: var(--color-black);
+            fill: var(--color-black);
+        }
+
+        button:hover {
+            box-shadow: inset 0px 0px 0px 2px var(--color-black-hover);
+            color: var(--color-black-hover);
+            cursor: pointer;
+        }
+
+    }
+
+    &--disabled {
+        button {
+            background-color: transparent;
+            box-shadow: inset 0px 0px 0px 2px var(--color-black-light);
+            color: var(--color-black-light);
+            fill: var(--color-black-light);
+        }
+    }
+}
+
+.black-button-text-only {
+    &--active {
+        button {
+            background-color: transparent;
+            color: var(--color-black);
+            fill: var(--color-black);
+        }
+
+        button:hover {
+            color: var(--color-black-hover);
+            fill: var(--color-black-hover);
+            cursor: pointer;
+        }
+    }
+
+    &--disabled {
+        button {
+            background-color: transparent;
+            color: var(--color-black-light);
+            fill: var(--color-black-light);
+        }
+
+    }
+
+}

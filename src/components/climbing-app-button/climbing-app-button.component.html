@@ -1,0 +1,4 @@
+<button (click)="onClickAction($event)" [disabled]="disabled" [type]="type">
+    {{label}}
+    <climbing-app-icon *ngIf="iconName && !isMatIcon" [name]="iconName"></climbing-app-icon>
+</button>

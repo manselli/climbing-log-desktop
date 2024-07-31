@@ -1,0 +1,13 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="login-form-container" autocomplete="on">
+    <div>Register</div>
+    <climbing-app-input></climbing-app-input>
+    <climbing-app-input></climbing-app-input>
+    <climbing-app-input></climbing-app-input>
+    <climbing-app-input></climbing-app-input>
+    <climbing-app-input></climbing-app-input>
+    <div>
+        <climbing-app-button label="Register"></climbing-app-button>
+        <climbing-app-button label="Login" buttonVariant="textOnly"
+            (onClick)="redirectToRegistration()"></climbing-app-button>
+    </div>
+</form>

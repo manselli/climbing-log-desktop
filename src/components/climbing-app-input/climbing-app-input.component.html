@@ -1,0 +1,34 @@
+<ng-container *ngIf="{
+    isFocused: isFocused$ | async,
+    passwordVisible: passwordVisible$ | async,
+    isTouched:isTouched$ | async,
+    isInvalid:isInvalid$ | async,
+} as vm">
+    <div class="custom-input-wrapper">
+        <input #inp class="form-control" [ngClass]="{
+            'right-padding':rightIcon || rightLabel,
+            'invalid': vm.isInvalid && vm.isTouched,
+        }" [formControl]="control" [attr.placeholder]="placeholder" (focus)="changeFocus($event)"
+            (blur)="changeFocus($event)" (ngModelChange)="onChangeValue($event)" [step]="step" (click)="onClick($event)"
+            [min]="minValue" [max]="maxValue" [type]="type==='password'?
+            vm.passwordVisible? 'text':'password'
+            :
+            type" (focus)="focusEvent($event)" (blur)="blurEvent($event)" (input)="handleOnInput($event)" />
+
+        <climbing-app-icon *ngIf="type==='password' && vm.passwordVisible" name="notShow"
+            (onClick)="changePasswordVisibility(!vm.passwordVisible)"></climbing-app-icon>
+        <climbing-app-icon *ngIf="type==='password' && !vm.passwordVisible" name="show"
+            (onClick)="changePasswordVisibility(!vm.passwordVisible)"></climbing-app-icon>
+
+        <div *ngIf="vm.isInvalid && vm.isTouched" class="text-danger">
+            {{errorMessage}}
+        </div>
+        <div class="absolute-right-container" *ngIf="rightLabel || rightIcon">
+            <div class="absolute-label">
+                {{rightLabel}}
+            </div>
+            <climbing-app-icon *ngIf="rightIcon" [name]="rightIcon"
+                (onClick)="handleRightIconClick($event)"></climbing-app-icon>
+        </div>
+    </div>
+</ng-container>

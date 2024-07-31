@@ -1,0 +1,173 @@
+.app-component {
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    background-color: var(--primary-background-color);
+
+    .albi-dashboard {
+        width: 100vw;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex: 1 1 0%;
+
+
+        nav.menu-left-panel {
+            flex-grow: 0;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 111;
+        }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-y: auto;
+            position: relative;
+
+            .page-header {
+                background-color: var(--secondary-background-color);
+                padding: 0.5rem;
+                border-bottom: thin solid var(--borders-color);
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+
+                >* {
+                    margin: 0 1rem;
+                }
+
+                .user-space-container {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    gap: 0.5rem;
+
+                    .clipped {
+                        width: 32px;
+                        clip-path: circle();
+                    }
+
+                    .user-text-info {
+                        font-size: 1rem;
+                    }
+                }
+
+                .company-container {
+                    display: flex;
+                    align-items: center;
+                    border-radius: var(--default-element-radius);
+                    border: thin solid var(--borders-color);
+                    padding: 0.25rem 0;
+
+                    .company-name {
+                        >* {
+                            white-space: nowrap;
+                            margin: 0.25rem 0;
+                        }
+                    }
+
+                    climbing-app-icon {
+                        cursor: pointer;
+                    }
+
+                    >* {
+                        margin: 0 0.5rem;
+                    }
+                }
+
+            }
+
+            .dashboard-message-panel {
+                width: 100%;
+                // padding: 0.25rem;
+                box-sizing: border-box;
+            }
+
+            .page-body {
+                overflow: auto;
+                height: 100%;
+                //position: relative; //to check
+                display: flex;
+                flex-direction: column;
+
+                .body-wrapper {
+                    padding: 3rem;
+                    display: flex;
+                    justify-content: center;
+                    //position: relative; //to check
+                    //flex-grow: 1; //to check
+
+                    .content-wrapper {
+                        width: 1200px;
+                        //overflow: hidden;
+                    }
+
+                }
+
+            }
+
+            .page-footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+
+
+                .elabel-creation-footer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: var(--secondary-background-color);
+                    border-top: solid thin var(--borders-color);
+                }
+            }
+        }
+    }
+}
+
+.change-company-selector {
+    padding: 0.5rem 0;
+    border-bottom: thin solid var(--borders-color);
+
+    .company-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .location-wrapper {
+        padding: 0.4rem 0;
+        margin: 0.1rem 0;
+        margin-left: 40px;
+        padding-left: 10px;
+    }
+
+    .selectable-element {
+        cursor: pointer;
+        border-radius: var(--default-element-radius);
+
+        &:hover {
+            background-color: var(--color-ruby-light);
+        }
+
+    }
+
+
+}
+
+
+.avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 40px;
+    width: 40px;
+
+    img {
+        width: 40px;
+        margin-right: 0.5rem;
+    }
+}

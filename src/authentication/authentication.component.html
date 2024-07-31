@@ -1,0 +1,14 @@
+<ng-container *ngIf="{
+    isLoading: isLoading$ | async
+} as vm">
+    <div class="bright-container">
+        <img src="assets/auth-pagepippo.jpg" alt="" width="720px">
+    </div>
+    <div class="dark-container">
+        <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="vm.isLoading" class="loading-overlay">
+        <div class="loader-container">
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,80 @@
+.albi-input-component {
+    position: relative;
+
+    .custom-input-wrapper {
+        position: relative;
+        text-align: center;
+        width: fit-content;
+
+        input {
+            border-radius: 40px;
+            border: none;
+            outline: var(--borders-color) solid 1px;
+            padding: 0.75rem 1.5rem;
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 100;
+            min-height: 48px;
+            box-sizing: border-box;
+            color: black;
+
+            &.right-padding {
+                padding-right: 3.5rem;
+            }
+
+            &:focus-visible {
+                border: none;
+                box-shadow: 0 0 0 3px var(--color-ruby-light);
+            }
+
+            &.invalid {
+                outline-color: var(--color-orange);
+            }
+        }
+
+        climbing-app-icon {
+            position: absolute;
+            top: 14px;
+            right: 10px;
+            fill: var(--icon-text-color);
+            cursor: pointer;
+        }
+
+        .date-picker-wrapper {
+            position: absolute;
+            top: -399px;
+            left: 0;
+        }
+
+        .absolute-right-container {
+            position: absolute;
+            right: 5px;
+            top: 0;
+
+            .absolute-label {
+                position: absolute;
+                top: 16px;
+                right: 5px;
+                color: var(--icon-text-color);
+            }
+
+            climbing-app-icon {
+                position: absolute;
+                top: 14px;
+                right: 5px;
+            }
+        }
+    }
+
+    &--full-width {
+        .custom-input-wrapper {
+            width: 100%;
+
+            input {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
