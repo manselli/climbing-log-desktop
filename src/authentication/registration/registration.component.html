@@ -1,11 +1,18 @@
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="login-form-container" autocomplete="on">
     <div>Register</div>
-    <climbing-app-input></climbing-app-input>
-    <climbing-app-input></climbing-app-input>
-    <climbing-app-input></climbing-app-input>
-    <climbing-app-input></climbing-app-input>
-    <climbing-app-input></climbing-app-input>
-    <div>
+    <climbing-app-input [control]="registrationForm.controls.name" placeholder="Name"></climbing-app-input>
+    <climbing-app-input [control]="registrationForm.controls.lastname" placeholder="Last Name"></climbing-app-input>
+    <climbing-app-input [control]="registrationForm.controls.email" placeholder="Email"></climbing-app-input>
+    <climbing-app-input [control]="registrationForm.controls.password" placeholder="Password"
+        type="password"></climbing-app-input>
+    <climbing-app-input [control]="registrationForm.controls.checkPassword" placeholder="Confirm password"
+        type="password"></climbing-app-input>
+    <label for="">
+        <climbing-app-checkbox [control]="registrationForm.controls.acceptTermsAndCondition"></climbing-app-checkbox>
+        <p>Accept <a href="">Terms and Conditions</a></p>
+
+    </label>
+    <div class="button-wrapper">
         <climbing-app-button label="Register"></climbing-app-button>
         <climbing-app-button label="Login" buttonVariant="textOnly"
             (onClick)="redirectToRegistration()"></climbing-app-button>

@@ -1,0 +1,44 @@
+.climbing-app-checkbox {
+    @keyframes rotateFalse {
+        0% {
+            transform: rotateY(0deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: rotateY(180deg);
+            opacity: 1;
+        }
+
+    }
+
+    input {
+        accent-color: var(--color-ruby);
+        height: 1rem;
+        width: 1rem;
+        animation: rotateFalse .2s linear;
+        cursor: pointer;
+
+    }
+
+    input[disabled] {
+        pointer-events: none
+    }
+
+    @keyframes rotateTrue {
+        0% {
+            transform: rotateY(180deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+    }
+
+    input:checked {
+        animation: rotateTrue .2s linear;
+        transition-delay: .1s;
+    }
+}

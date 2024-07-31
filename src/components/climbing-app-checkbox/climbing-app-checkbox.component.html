@@ -1,0 +1,6 @@
+<div>
+    <input *ngIf="control" type="checkbox" (keydown.enter)="changeValue()" (change)="onChange($event)" [checked]="value"
+        [formControl]="control" />
+    <input *ngIf="!control" type="checkbox" [disabled]="disabled" (keydown.enter)="changeValue()"
+        (change)="onChange($event)" [checked]="value" />
+</div>

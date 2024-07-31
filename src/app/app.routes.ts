@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { AuthenticationComponent } from 'src/authentication/authentication.component';
 import { ClimbingAppButtonComponent } from 'src/components/climbing-app-button/climbing-app-button.component';
+import { ClimbingAppCheckbox } from 'src/components/climbing-app-checkbox/climbing-app-checkbox.component';
 import { ClimbingAppIconComponent } from 'src/components/climbing-app-icon/climbing-app-icon.component';
 import { ClimbingAppInputComponent } from 'src/components/climbing-app-input/climbing-app-input.component';
 import { DashboardComponent } from 'src/dashboards/dashboard/dashboard.component';
@@ -18,6 +19,7 @@ const EXPORT_COMPONENT_DECLARATION = [
     ClimbingAppIconComponent,
     ClimbingAppInputComponent,
     ClimbingAppButtonComponent,
+    ClimbingAppCheckbox,
 ];
 
 export const EXPORT_DECLARATIONS = [
