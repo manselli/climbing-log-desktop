@@ -40,15 +40,18 @@ export class LoginComponent {
     }
 
     onSubmit() {
+        console.log('on submit')
         Object.values(this.loginForm.controls).forEach(control => {
             control.markAsTouched();
             control.updateValueAndValidity();
         });
         this.loginForm.updateValueAndValidity();
         if (!this.loginForm.valid) {
+            console.log('pippo1')
             this._messageService.addMessage({ alert: "danger", messageText: `ERRORE: compilare tutti i campi obbligatori` })
             return
         }
+        console.log('click login')
         this._store.dispatch(AUTHENTICATION_PAGE_ACTIONS.clickLogin(this.loginForm.value as { username: string, password: string }));
     }
 

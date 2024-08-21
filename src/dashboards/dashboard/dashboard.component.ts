@@ -1,5 +1,7 @@
 
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { take, tap } from 'rxjs';
+import { BackendService } from 'src/services/backend.service';
 //import { UserSession['companyAccesses'] } from './store/dashboard.state';
 
 @Component({
@@ -9,6 +11,18 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
+
+    constructor(
+        private _backendService: BackendService,
+    ) { }
+    ngOnInit(): void {
+        this._backendService.get(`users/me`).pipe(
+            tap(response => {
+                console.log(response)
+            }),
+            take(1),
+        ).subscribe();
+    }
 
 }

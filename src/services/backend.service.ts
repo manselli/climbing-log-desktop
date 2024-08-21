@@ -78,10 +78,12 @@ export class BackendService {
         [header: string]: string | string[];
     } {
 
+        const token = this._authService.getSessionInfo()?.accessToken;
+
         const headers: HttpHeaders | {
             [header: string]: string | string[];
         } = {
-            "Authorization": `Bearer ${this._authService.getSessionInfo().accessToken}`,
+            "Authorization": `Bearer ${token}`,
         }
         if (opts.extraHeaders) {
             opts.extraHeaders.forEach(elm => headers[elm.key] = elm.value)

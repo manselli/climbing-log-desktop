@@ -155,6 +155,7 @@ export class AuthService {
                         }
                     },
                     onFailure: function (err) {
+                        console.log('authenticate failure')
                         reject(err.message || JSON.stringify(err));
                     },
                 });

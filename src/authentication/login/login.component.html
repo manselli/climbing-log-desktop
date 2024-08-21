@@ -1,9 +1,10 @@
 <form [formGroup]="loginForm" class="login-form-container" autocomplete="on">
     <div>Login</div>
-    <climbing-app-input placeholder="email"></climbing-app-input>
-    <climbing-app-input placeholder="password" type="password"></climbing-app-input>
+    <climbing-app-input placeholder="email" [control]="loginForm.controls.username"></climbing-app-input>
+    <climbing-app-input placeholder="password" type="password"
+        [control]="loginForm.controls.password"></climbing-app-input>
     <div class="button-wrapper">
-        <climbing-app-button label="Login" (onClick)="pippo()"></climbing-app-button>
+        <climbing-app-button label="Login" (onClick)="onSubmit()"></climbing-app-button>
         <climbing-app-button label="Register" buttonVariant="textOnly"
             (onClick)="redirectToRegistration()"></climbing-app-button>
     </div>
