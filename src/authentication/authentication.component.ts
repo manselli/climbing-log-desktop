@@ -34,7 +34,7 @@ export class AuthenticationComponent implements AfterViewInit, OnInit {
     }
 
     ngAfterViewInit(): void {
-        this._elementRef.nativeElement.classList.add('login-container');
+        this._elementRef.nativeElement.classList.add('authentication-page');
     }
 
 }

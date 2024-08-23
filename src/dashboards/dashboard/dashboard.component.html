@@ -1,6 +1,15 @@
 <ng-container *ngIf="{
+    isMobileView:isMobileView$ | async,
 } as vm">
-    <div class="albi-dashboard">
-        hello from dashboard
+
+    <div #mainPageElement class="layout-container layout-light layout-static layout-topbar-light layout-menu-dim">
+        <app-topbar [mainPageElement]="mainPageElement" [isMobileView]="vm.isMobileView"></app-topbar>
+        <app-sidebar></app-sidebar>
+        <div class="layout-content-wrapper">
+            <div class="albi-dashboard">
+                hello from dashboard
+            </div>
+        </div>
+
     </div>
 </ng-container>

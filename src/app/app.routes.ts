@@ -4,6 +4,8 @@ import { ClimbingAppButtonComponent } from 'src/components/climbing-app-button/c
 import { ClimbingAppCheckbox } from 'src/components/climbing-app-checkbox/climbing-app-checkbox.component';
 import { ClimbingAppIconComponent } from 'src/components/climbing-app-icon/climbing-app-icon.component';
 import { ClimbingAppInputComponent } from 'src/components/climbing-app-input/climbing-app-input.component';
+import { AppSidebar } from 'src/dashboards/components/app-sidebar/app-sidebar.component';
+import { AppTopbar } from 'src/dashboards/components/app-topbar/app-topbar.component';
 import { DashboardComponent } from 'src/dashboards/dashboard/dashboard.component';
 import { AppComponent } from './app.component';
 
@@ -12,7 +14,9 @@ import { AppComponent } from './app.component';
 export const DECLARATIONS = [
     DashboardComponent,
     AuthenticationComponent,
-    AppComponent
+    AppComponent,
+    AppTopbar,
+    AppSidebar
 ];
 
 const EXPORT_COMPONENT_DECLARATION = [

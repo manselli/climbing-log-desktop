@@ -1,14 +1,20 @@
-.login-container {
-    width: 100%;
+.authentication-page {
+    width: 100vw;
     height: 100vh;
     display: flex;
-    flex-wrap: wrap;
 
-    .bright-container {
-        width: 50%;
+    .bright-container,
+    .dark-container {
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
+        /* Ensure containers take full height */
+    }
+
+    .bright-container {
+        position: relative;
 
         .absolute-img {
             position: absolute;
@@ -18,39 +24,26 @@
     }
 
     .dark-container {
-        width: 50%;
         background-color: black;
         padding: 2rem;
         box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         * {
             color: white;
         }
 
 
-
-        form {
-            width: 28rem;
-        }
-
         .form-header {
-            width: 28rem;
             margin-bottom: var(--spacing-sm);
 
             p {
-                font-size: large
+                font-size: large;
             }
         }
 
         .login-form-container {
-            width: 28rem;
             margin-left: auto;
             margin-right: auto;
-            justify-content: center;
-            align-items: center;
 
             albi-input {
                 width: 80%;
@@ -72,7 +65,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(201, 201, 201, .6);
+        background-color: rgba(201, 201, 201, 0.6);
     }
+}
 
+/* Media query to hide the bright container on small screens */
+@media (max-width: 768px) {
+    .authentication-page {
+        .bright-container {
+            display: none;
+        }
+
+        .dark-container {
+            flex: 1;
+            width: 100vw;
+        }
+    }
 }
