@@ -39,7 +39,18 @@ export const ROUTES: Routes = [
     },
     {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        children: [
+            {
+                path: '',
+                loadChildren: () => import('./../dashboards/home-page/home-page.module').then(m => m.HomePageModule)
+            },
+            {
+                path: 'logs',
+                loadChildren: () => import('../dashboards/log-section/modules/log-section.module').then(m => m.LogSectionModule)
+            },
+
+        ]
     },
     {
         path: 'authentication',

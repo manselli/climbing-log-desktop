@@ -1,0 +1,40 @@
+<ng-container *ngIf="{
+    showAddActivityPanel: showAddActivityPanel$ | async,
+} as vm">
+    <h1>Arrampicata in falesia.</h1>
+    <p>In questa sezione annota tutte le attività di arrampicata svolte in falesia.</p>
+
+    <climbing-app-button label="Aggiungi attività" (onClick)="changeShowAddActivityPanel(true)"></climbing-app-button>
+
+    <p-dialog [visible]="vm.showAddActivityPanel" (visibleChange)="changeShowAddActivityPanel($event)"> <ng-template
+            pTemplate="header">
+
+            <h3>Aggiungi una nuova attivita</h3>
+        </ng-template>
+        <h4>Luogo</h4>
+        <form action="">
+            <div class="d-flex">
+                <div class="d-grid">
+                    <span>Falesia</span>
+                    <input type="text" pInputText />
+                </div>
+                <div class="d-grid">
+                    <span>Falesia</span>
+                    <input type="text" pInputText />
+                </div>
+            </div>
+            <div class="d-grid">
+                <span>Falesia</span>
+                <input type="text" pInputText />
+            </div>
+            <div>
+
+            </div>
+            <div class="d-grid">
+                <span>Settore</span>
+                <input type="text" pInputText />
+            </div>
+        </form>
+    </p-dialog>
+
+</ng-container>

@@ -21,7 +21,24 @@
         list-style-type: none;
         display: grid;
         gap: 2rem;
+        padding: .5rem 1rem;
         margin: 2rem 0;
+
+
+        a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            outline: 0 none;
+            color: #e5e8ec;
+            cursor: pointer;
+            padding: .5rem 1rem;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        a:hover {
+            background-color: #59667d;
+        }
 
         .layout-root-menuitem {
             .layout-menuitem-root-text {
@@ -44,14 +61,7 @@
             }
 
             a {
-                display: flex;
-                align-items: center;
-                position: relative;
-                outline: 0 none;
-                color: #e5e8ec;
-                cursor: pointer;
-                padding: .5rem 1rem;
-                transition: background-color 0.2s, box-shadow 0.2s;
+                margin-left: 1rem;
             }
 
             a:hover {

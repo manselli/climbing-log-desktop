@@ -2,6 +2,7 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { EXPORT_DECLARATIONS } from "./app.routes";
+import { CommonPrimeModule } from "./common-prime.module";
 
 @NgModule({
     declarations: [
@@ -13,6 +14,7 @@ import { EXPORT_DECLARATIONS } from "./app.routes";
         ReactiveFormsModule,
         //   TranslateModule,
         // AlbiUiLibraryModule,
+        CommonPrimeModule
     ],
     exports: [
         ...EXPORT_DECLARATIONS,
@@ -20,6 +22,7 @@ import { EXPORT_DECLARATIONS } from "./app.routes";
         ReactiveFormsModule,
         //  TranslateModule,
         // AlbiUiLibraryModule,
+        CommonPrimeModule,
     ]
 })
 export class SharedModule { }

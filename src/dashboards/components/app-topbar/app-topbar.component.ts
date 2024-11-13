@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-topbar',
@@ -13,6 +14,10 @@ export class AppTopbar {
 
     @Input() mainPageElement: HTMLElement;
     @Input() isMobileView: boolean;
+
+    constructor(
+        private _router: Router,
+    ) { }
 
 
     changeMainPageClasses() {
@@ -29,6 +34,10 @@ export class AppTopbar {
                 this.mainPageElement.classList.add('layout-static-inactive')
             }
         }
+    }
+
+    redirectToHome() {
+        this._router.navigate(['dashboard'])
     }
 
 }

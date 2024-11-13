@@ -108,7 +108,7 @@ export class AuthenticationEffects {
     handleLoginError = createEffect(() =>
         this.actions$.pipe(
             ofType(AUTHENTICATION_API_ACTIONS.authenticateFailure),
-            tap(_ => this._router.navigate(['authentication/registration']))
+            tap(_ => this._router.navigate(['authentication/login']))
         ),
         {
             dispatch: false

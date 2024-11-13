@@ -1,0 +1,137 @@
+//Variables
+
+:root {
+    --default-element-radius: 10px;
+
+    --borders-color: #c6c6c6;
+}
+
+//style classes
+
+.cliccable {
+    cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-block {
+    display: block;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-around {
+    justify-content: space-around;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.j-end {
+    justify-content: end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-grow-0 {
+    flex-grow: 0;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+
+.gap-1 {
+    gap: 0.5rem;
+}
+
+.gap-3 {
+    gap: 1rem;
+}
+
+.gap-6 {
+    gap: 2rem;
+}
+
+.p-1 {
+    padding: 0.5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-6 {
+    padding: 2rem;
+}
+
+.m-1 {
+    margin: 0.5rem;
+}
+
+.m-3 {
+    margin: 1rem;
+}
+
+.m-6 {
+    margin: 2rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-half {
+    width: 50%;
+}
+
+.w-fit-content {
+    width: fit-content;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-half {
+    height: 50%;
+}
+
+.h-fit-content {
+    height: fit-content;
+}
+
+.default-element-radius {
+    border-radius: var(--default-element-radius);
+}
+
+.thin-border {
+    border: thin solid black;
+}
